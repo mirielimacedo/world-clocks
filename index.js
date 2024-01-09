@@ -6,8 +6,9 @@ let adelaideDateElement =  adelaideElement.querySelector(".date");
 let adelaideTimeElement = adelaideElement.querySelector(".time");
 let adelaideTime = moment().tz("Australia/Adelaide");
 
-adelaideDateElement.innerHTML= adelaideTime.format("MMMM Do YYYY");
-adelaideTimeElement.innerHTML =  adelaideTime.format("h:mm:ss [<small>]A[</small>]" );
+adelaideDateElement.innerHTML = adelaideTime.format("MMMM Do YYYY");
+adelaideTimeElement.innerHTML = adelaideTime.format("h:mm:ss") + " <small>" + adelaideTime.format("A").toLowerCase() + "</small>";
+
 
 //Texas
 let texasElement = document.querySelector("#texas");
@@ -16,8 +17,9 @@ let texasDateElement =  texasElement.querySelector(".date");
 let texasTimeElement = texasElement.querySelector(".time");
 let texasTime = moment().tz("America/Texas");
 
-texasDateElement.innerHTML= texasTime.format("MMMM Do YYYY");
-texasTimeElement.innerHTML =  texasTime.format("h:mm:ss [<small>]A[</small>]" );
+texasDateElement.innerHTML = texasTime.format("MMMM Do YYYY");
+texasTimeElement.innerHTML = texasTime.format("h:mm:ss") + " <small>" + texasTime.format("A").toLowerCase() + "</small>";
+
 
 }
 }
@@ -41,7 +43,8 @@ function updateCity(event){
         <h2>${cityName}</h2>
         <div class="date">${cityTime.format("MMMM Do YYYY")}</div>
       </div>
-      <div class="time">${cityTime.format("h:mm:ss A")}</div>
+      <div class="time">${cityTime.format("h:mm:ss")} <small>${cityTime.format("A").toLowerCase()}</small></div>
+
     </div>
   `;
 }
