@@ -12,30 +12,23 @@
   <body>
     <div class="container">
       <h1>World Clock</h1>
-      <select>
-        option value="Australia/Adelaide">Select a city...</option>
+      <select id="city">
+        <option value="">Select a city...</option>
+        <option value="Australia/Perth">Perth</option>
         <option value="Australia/Melbourne">Melbourne</option>
         <option value="Australia/Sydney">Sydney</option>
-        <option value="Australia/Perth">Perth</option>
-         <option value="Australia/Adelaide">Adelaide</option>
+        <option value="Australia/Adelaide">Adelaide</option>
       </select>
-      <div class="city" id="adelaide">
-        <div>
-          <h2>Adelaide</h2>
+      <div id="cities">
+        <div class="city" id="perth">
+          <div>
+            <h2>Perth</h2>
 
-          <div class="date"></div>
+            <div class="date"></div>
+          </div>
+
+          <div class="time"></div>
         </div>
-
-        <div class="time"></div>
-      </div>
-      <div class="city" id="perth">
-        <div>
-          <h2>Perth</h2>
-
-          <div class="date"></div>
-        </div>
-
-        <div class="time"></div>
       </div>
     </div>
     <footer>
